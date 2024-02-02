@@ -19,7 +19,7 @@ export default function About() {
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <div className="container mx-auto mt-14">
+      <div className="container mx-auto mt-14 mb-40 sm:mb-0">
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8">
           <div className="p-1 ml-7">
             <Skills />
