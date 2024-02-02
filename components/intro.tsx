@@ -90,7 +90,7 @@ export default function Intro() {
                 href="/KGM_Resumer.pdf"
                 download
               >
-                CV{" "}
+                Resume{" "}
                 <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
               </a>
 
