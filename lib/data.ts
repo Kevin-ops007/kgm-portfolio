@@ -1,6 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import spaceInvadersImg from "@/public/spaceinvaders.png";
+import fundFlowImg from "@/public/fundflow.png";
 
 export const links = [
   {
@@ -69,6 +70,13 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "FundFlow",
+    description:
+      "A Web App that helps you track fund flow.",
+    tags: ["Next.js", "React", "TypeScript", "Tailwind", "Node.js", "MongoDB"],
+    imageUrl: fundFlowImg,
+  },
   {
     title: "Space Invaders",
     description:
