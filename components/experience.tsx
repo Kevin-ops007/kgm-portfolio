@@ -12,10 +12,10 @@ import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
 
 export default function Experience() {
-  const { ref } = useSectionInView("Experience");
+  const { ref } = useSectionInView("Experience", 0.3);
 
   return (
-    <section id="experience" ref={ref} className="scroll-mt-28 mb-28 sm:mb-40">
+    <section id="experience" ref={ref} className="scroll-mt-[6rem] mb-36 sm:mb-52">
       <SectionHeading>My experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
@@ -42,9 +42,17 @@ export default function Experience() {
               <motion.h3 className="font-semibold capitalize" whileHover={{ scale: 1.1 }}>{item.title}</motion.h3>
               <p className="font-normal !mt-0">{item.company}</p>
               <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              {item.highlights ? (
+                <ul className="!mt-2 list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-700 dark:text-white/75">
+                  {item.highlights.map((highlight, highlightIndex) => (
+                    <li key={highlightIndex}>{highlight}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
+                  {item.description}
+                </p>
+              )}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}

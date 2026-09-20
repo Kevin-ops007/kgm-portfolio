@@ -2,14 +2,55 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg: #f5f5f4;
+  --card: rgba(255, 255, 255, 0.75);
+  --card-strong: rgba(255, 255, 255, 0.92);
+  --text: #111827;
+  --muted: #4b5563;
+  --line: rgba(17, 24, 39, 0.08);
+  --shadow: rgba(15, 23, 42, 0.06);
+}
+
 html {
   --line-color: #e5e7eb;
+  scroll-behavior: smooth;
 }
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
+  --bg: #111827;
+  --card: rgba(17, 24, 39, 0.7);
+  --card-strong: rgba(17, 24, 39, 0.9);
+  --text: #f9fafb;
+  --muted: #d1d5db;
+  --line: rgba(255, 255, 255, 0.12);
+  --shadow: rgba(0, 0, 0, 0.18);
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent 32%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(245, 245, 244, 0.96));
+  color: var(--text);
+}
+
+html.dark body {
+  background:
+    radial-gradient(circle at top, rgba(59, 130, 246, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(17, 24, 39, 1), rgba(17, 24, 39, 0.98));
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.2);
 }
 
 .borderBlack {
   @apply border border-black/10;
+}
+
+@layer components {
+  .soft-card {
+    @apply border border-black/5 bg-white/80 shadow-[0_10px_30px_rgba(15,23,42,0.04)] backdrop-blur-sm dark:border-white/10 dark:bg-slate-900/70 dark:shadow-none;
+  }
 }

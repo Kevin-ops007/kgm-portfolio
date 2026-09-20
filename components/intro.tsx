@@ -47,35 +47,40 @@ export default function Intro() {
         <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-4">
           <div className="p-1">
             <motion.h1
-              className="mb-10 mt-4 px-1 lg:text-6xl font-medium !leading-[1.5] sm:text-4xl"
-              initial={{ opacity: 0, y: 100 }}
+              className="mb-10 mt-4 px-1 text-4xl font-medium !leading-[1.5] sm:text-4xl lg:text-6xl"
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, ease: "easeOut" }}
             >
               <span className="font-bold">Hi!</span>
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 100 }}
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 delay: 0.1,
+                duration: 0.55,
+                ease: "easeOut",
               }}
-              className="mb-10 mt-4 px-1 lg:text-4xl font-medium !leading-[1.5] sm:text-2xl">
+              className="mb-10 mt-4 px-1 text-2xl font-medium !leading-[1.5] sm:text-2xl lg:text-4xl">
               I'm Kevin. I'm a {""}
               <span className="font-bold">Software Engineer</span> {" "}
               who loves {""}
               building <span className="font-bold">scalable applications</span>.
             </motion.p>
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
-              initial={{ opacity: 0, y: 100 }}
+              className="flex flex-col items-center justify-center gap-2 px-2 text-lg font-medium sm:flex-row sm:px-4"
+              initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{
                 delay: 0.2,
+                duration: 0.55,
+                ease: "easeOut",
               }}
             >
               <Link
                 href="#contact"
-                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+                className="group flex items-center gap-2 rounded-full bg-slate-900 px-7 py-3 text-white shadow-[0_10px_25px_rgba(15,23,42,0.18)] outline-none transition hover:-translate-y-0.5 hover:bg-slate-950 focus:scale-110 active:scale-105"
                 onClick={() => {
                   setActiveSection("Contact");
                   setTimeOfLastClick(Date.now());
@@ -86,7 +91,7 @@ export default function Intro() {
               </Link>
 
               <a
-                className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+                className="group flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white/90 px-7 py-3 shadow-sm outline-none transition hover:-translate-y-0.5 hover:shadow-md focus:scale-110 active:scale-105 dark:border-white/10 dark:bg-white/5"
                 href="/KGM_Resume.pdf"
                 download
               >
@@ -95,7 +100,7 @@ export default function Intro() {
               </a>
 
               <a
-                className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className="flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white/90 p-4 text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:border-white/10 dark:bg-white/5 dark:text-white/60"
                 href="https://www.linkedin.com/in/kevin-mathew-5bab50196/"
                 target="_blank"
               >
@@ -103,7 +108,7 @@ export default function Intro() {
               </a>
 
               <a
-                className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+                className="flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white/90 p-4 text-[1.35rem] text-gray-700 shadow-sm transition hover:-translate-y-0.5 hover:text-gray-950 focus:scale-[1.15] active:scale-105 dark:border-white/10 dark:bg-white/5 dark:text-white/60"
                 href="https://github.com/Kevin-ops007"
                 target="_blank"
               >
@@ -111,13 +116,15 @@ export default function Intro() {
               </a>
             </motion.div>
           </div>
-          <div className="p-30 hidden sm:block">
+          <div className="flex items-center justify-center px-4 py-6 sm:p-30">
             <motion.svg
-              width="400"
-              height="400"
+              width="100%"
+              height="100%"
               viewBox="0 0 400 400"
+              className="mx-auto w-full max-w-[220px] overflow-visible sm:max-w-[400px]"
               initial="hidden"
               animate="visible"
+              preserveAspectRatio="xMidYMid meet"
             >
               <motion.circle
                 cx="100"

@@ -12,23 +12,23 @@ export default function About() {
   return (
     <motion.section
       ref={ref}
-      className="text-center scroll-mt-28"
+      className="text-center scroll-mt-[6rem]"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
     >
       <SectionHeading>About me</SectionHeading>
-      <div className="container mx-auto mt-14 mb-40 sm:mb-0">
-        <div className="grid lg:grid-cols-2 sm:grid-cols-1 gap-8">
-          <div className="p-1 ml-7">
+      <div className="container mx-auto mt-14 mb-20 px-4 sm:mb-12 sm:px-0">
+        <div className="grid gap-8 sm:grid-cols-1 lg:grid-cols-2">
+          <div className="p-1 sm:ml-7">
             <Skills />
           </div>
-          <div className="p-1 mr-7 text-xl">
+          <div className="p-1 text-base sm:mr-7 sm:text-xl">
             <p>
               A proud Software Engineering graduate from the {" "}
-              <span className="font-medium">University of Victoria,</span> I currently reside in the picturesque city of {" "}
-              <span className="font-medium">Victoria, BC.</span>{" "}
+              <span className="font-medium">University of Victoria,</span> I currently reside in the vibrant city of {" "}
+              <span className="font-medium">Vancouver, BC.</span>{" "}
               <span className="italic">My favorite part of programming</span> is the
               problem-solving aspect. I <span className="underline">love</span> the {" "}
               feeling of finally figuring out a solution to a problem. {" "}
@@ -40,9 +40,8 @@ export default function About() {
             </p>
 
             <p>
-              I am currently looking for a{" "}
-              <span className="font-medium">full-time position</span> as a software
-              engineer.
+              I am currently working as a <span className="font-medium">software engineer</span>,
+              building great products and creating solutions that improve both user experience and business impact.
             </p>
           </div>
         </div>

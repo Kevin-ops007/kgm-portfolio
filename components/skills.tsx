@@ -30,11 +30,11 @@ export default function Skills() {
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+            className="rounded-full border border-slate-200 bg-white/80 px-4 py-2.5 text-sm font-medium text-slate-700 shadow-sm transition hover:-translate-y-0.5 dark:border-white/10 dark:bg-slate-900/70 dark:text-slate-200"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.05 }}
             whileInView="animate"
             viewport={{
               once: true,

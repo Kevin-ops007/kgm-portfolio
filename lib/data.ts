@@ -26,7 +26,28 @@ export const links = [
   },
 ] as const;
 
-export const experiencesData = [
+type ExperienceItem = {
+  title: string;
+  company: string;
+  location: string;
+  description: string;
+  highlights?: readonly string[];
+  icon: ReturnType<typeof React.createElement>;
+  date: string;
+  link: string;
+};
+
+export const experiencesData: ReadonlyArray<ExperienceItem> = [
+  {
+    title: "Quality and Support Engineer",
+    company: "Atono",
+    location: "Remote",
+    description:
+      "I work as a quality and support engineer at Atono, building and improving automated test coverage, diagnosing production issues, and supporting reliable releases across the application stack.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Dec. 2024 – Present",
+    link: "https://www.atono.com/",
+  },
   {
     title: "Software Enginer Intern",
     company: "Peloton Technologies",
